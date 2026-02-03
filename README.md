@@ -66,6 +66,7 @@ GET /simulaciones/{usuarioId}
   ]
 }
 
+```
 | Producto               | Precio ($) | % Ganancia | Ganancia Estimada ($) |
 | ---------------------- | ---------- | ---------- | --------------------- |
 | ETF Global             | 1500       | 12.00%     | 180.00                |
@@ -82,4 +83,19 @@ Tabla 2 – Combinaciones Evaluadas (Capital $3000)
 | ETF + Dividendos                   | 2300            | 234.00             | 700                  |
 | Acciones Tech + Dividendos + Bonos | 2300            | 165.25             | 700                  |
 
+## Resultado
 
+```json
+{
+  "capital_disponible": 3000,
+  "productos_seleccionados": [
+    { "nombre": "ETF Global", "precio": 1500, "ganancia_esperada": 180 },
+    { "nombre": "Fondo Acciones Tech", "precio": 1000, "ganancia_esperada": 85 }
+  ],
+  "costo_total": 2500,
+  "capital_restante": 500,
+  "ganancia_total": 265,
+  "retorno_total_porcentaje": 10.6,
+  "mensaje": "Simulación exitosa con ganancias óptimas"
+}
+```
