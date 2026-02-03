@@ -1,0 +1,16 @@
+
+{
+  "name": "andesfin-backend",
+  "version": "1.0.0",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "sequelize": "^6.37.1",
+    "pg": "^8.11.5",
+    "pg-hstore": "^2.3.4",
+    "uuid": "^9.0.1"
+  }
+}
