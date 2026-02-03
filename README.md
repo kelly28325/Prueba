@@ -35,7 +35,6 @@ POST /simulaciones
 GET /simulaciones/{usuarioId}
 
 Ejemplo 1 – Simulación con Ganancias Óptimas
-Request
 {
   "usuario_id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
   "capital_disponible": 3000,
@@ -46,3 +45,13 @@ Request
     { "nombre": "Fondo de Dividendos", "precio": 800, "porcentaje_ganancia": 6.75 }
   ]
 }
+
+`
+
+| Producto               | Precio ($) | % Ganancia | Ganancia Estimada ($) |
+| ---------------------- | ---------- | ---------- | --------------------- |
+| ETF Global             | 1500       | 12.00%     | 180.00                |
+| Fondo Acciones Tech    | 1000       | 8.50%      | 85.00                 |
+| Fondo de Dividendos    | 800        | 6.75%      | 54.00                 |
+| Bonos Corporativos AAA | 500        | 5.25%      | 26.25                 |
+
