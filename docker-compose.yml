@@ -1,17 +1,24 @@
-
 version: '3.8'
+
 services:
   db:
     image: postgres:15
+    container_name: andesfin-db
     environment:
       POSTGRES_DB: andesfin
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
     ports:
       - "5432:5432"
+    volumes:
+      - ./init-db:/docker-entrypoint-initdb.d
+    restart: always
+
   backend:
     build: .
+    container_name: andesfin-backend
     ports:
       - "3000:3000"
     depends_on:
       - db
+    restart: always
